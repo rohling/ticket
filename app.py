@@ -5,6 +5,10 @@ app = Flask(__name__)
 
 dados_armazenados = {"name":"Rohling"}
 
+@app.route('/')
+def home():
+    return 'Home Page Route'
+
 @app.route('/api', methods=['GET', 'POST'])
 def api():
     if request.method == 'POST':

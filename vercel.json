@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "entrypoint.sh",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "."
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api",
+        "dest": "/api.py"
+      }
+    ],
+    "env": {
+      "FLASK_APP": "app.py"
+    }
+  }
+  
